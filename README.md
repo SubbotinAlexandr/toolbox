@@ -9,4 +9,7 @@
 echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER
 ## Ставим программы
 sudo aptitude update && sudo aptitude -y upgrade
-sudo aptitude install -y vim terminator
+sudo aptitude install -y vim terminator linux-headers-amd64 net-tools
+
+echo "export PATH=\"$PATH:/usr/sbin:/sbin\"" >> ~/.bashrc
+
